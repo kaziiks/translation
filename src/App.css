@@ -1,0 +1,45 @@
+/* Tabulas konteiners */
+.table-container {
+  margin-top: 2rem;
+  overflow-x: auto; /* Mobilajām ierīcēm */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gherkin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  color: #ffffff;
+}
+
+.gherkin-table th {
+  background-color: #646cff; /* Tava logo krāsa */
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.gherkin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+/* Rindu animācija */
+.gherkin-table tr:hover td {
+  background: rgba(100, 108, 255, 0.15);
+  color: #61dafb; /* React zilā krāsa */
+}
+
+/* Virsraksts */
+h2 {
+  color: #646cff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}

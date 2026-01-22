@@ -1,0 +1,51 @@
+.translations-wrapper {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.gherkin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.03); /* Ļoti maigs fons tumšajā tēmā */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gherkin-table th {
+  background-color: #646cff; /* Tava akcenta krāsa */
+  color: white;
+  padding: 1.2em;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.gherkin-table td {
+  padding: 1em 1.2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gherkin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Interaktivitāte */
+.gherkin-table tr:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+/* Atbalsts gaišajai tēmai */
+@media (prefers-color-scheme: light) {
+  .gherkin-table {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  .gherkin-table td {
+    border-bottom: 1px solid #e5e5e5;
+    color: #213547;
+  }
+}
