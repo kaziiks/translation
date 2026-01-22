@@ -11,16 +11,20 @@ const TranslationRow = ({ english, latvian }) => (
 // Galvenā Translations komponente
 const Translations = () => {
   const gherkinTerms = [
-    { id: 1, en: "Feature", lv: "Funkcionalitāte" },
+    { id: 1, en: "Feature", lv: "Funkcionalā iezīme" },
     { id: 2, en: "Scenario", lv: "Scenārijs" },
     { id: 3, en: "Given", lv: "Kad" },
     { id: 4, en: "When", lv: "Ja" },
     { id: 5, en: "Then", lv: "Tad" },
     { id: 6, en: "And", lv: "Un" },
-    { id: 7, en: "But", lv: "Bet" },
-    { id: 8, en: "Background", lv: "Konteksts" },
-    { id: 9, en: "Scenario Outline", lv: "Scenārija paraugs" },
-    { id: 10, en: "Examples", lv: "Piemēri" },
+    { id: 7, en: "Or", lv: "Vai" },
+    { id: 8, en: "But", lv: "Bet" },
+    { id: 9, en: "Background", lv: "Konteksts" },
+    { id: 10, en: "Scenario Outline", lv: "Scenārijs pēc parauga" },
+    { id: 11, en: "Rule", lv: "Noteikums" },
+    { id: 12, en: "Examples", lv: "Piemēri" },
+    { id: 13, en: "User Story", lv: "Lietotājstāsts" },
+    { id: 14, en: "#", lv: "Komentārs" },
   ];
 
   return (
