@@ -1,17 +1,16 @@
-import React from 'react';
-
+import React from "react";
 // Atsevišķa komponente tabulas rindai
 const TranslationRow = ({ english, latvian }) => (
   <tr>
-    <td style={cellStyle}>{english}</td>
-    <td style={cellStyle}>{latvian}</td>
+    <td>{english}</td>
+    <td>{latvian}</td>
   </tr>
 );
 
 // Galvenā Translations komponente
 const Translations = () => {
   const gherkinTerms = [
-    { id: 1, en: "Feature", lv: "Funkcionalā iezīme" },
+    { id: 1, en: "Feature", lv: "Funkcionālā iezīme" },
     { id: 2, en: "Scenario", lv: "Scenārijs" },
     { id: 3, en: "Given", lv: "Kad" },
     { id: 4, en: "When", lv: "Ja" },
@@ -28,31 +27,28 @@ const Translations = () => {
   ];
 
   return (
-    <div style={{ padding: '20px' }}>
+    <section className="table-container">
       <h2>Gherkin termini</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+
+      <table className="gherkin-table">
         <thead>
-          <tr style={{ backgroundColor: '#f2f2f2' }}>
-            <th style={headerStyle}>Angļu valodā</th>
-            <th style={headerStyle}>Latviešu valodā</th>
+          <tr>
+            <th>Angļu valodā</th>
+            <th>Latviešu valodā</th>
           </tr>
         </thead>
         <tbody>
           {gherkinTerms.map(term => (
-            <TranslationRow 
-              key={term.id} 
-              english={term.en} 
-              latvian={term.lv} 
+            <TranslationRow
+              key={term.id}
+              english={term.en}
+              latvian={term.lv}
             />
           ))}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 };
-
-// Vienkārši stili uzskatāmībai
-const headerStyle = { border: '1px solid #ddd', padding: '12px', textAlign: 'left' };
-const cellStyle = { border: '1px solid #ddd', padding: '8px' };
 
 export default Translations;

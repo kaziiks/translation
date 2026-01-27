@@ -1,14 +1,17 @@
-/* Tabulas konteiners */
+/* ===== TABULAS KONTEINERS ===== */
 .table-container {
   margin-top: 2rem;
+  width: 100%;
   overflow-x: auto; /* Mobilajām ierīcēm */
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ===== TABULA ===== */
 .gherkin-table {
   width: 100%;
   border-collapse: collapse;
@@ -16,30 +19,73 @@
   color: #ffffff;
 }
 
+/* ===== GALVENE ===== */
 .gherkin-table th {
-  background-color: #646cff; /* Tava logo krāsa */
-  color: white;
-  padding: 1rem;
+  background: linear-gradient(135deg, #646cff, #747bff);
+  color: #ffffff;
+  padding: 1rem 1.2rem;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
-
-.gherkin-table td {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease;
-}
-
-/* Rindu animācija */
-.gherkin-table tr:hover td {
-  background: rgba(100, 108, 255, 0.15);
-  color: #61dafb; /* React zilā krāsa */
-}
-
-/* Virsraksts */
-h2 {
-  color: #646cff;
-  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ===== ŠŪNAS ===== */
+.gherkin-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.gherkin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== HOVER EFEKTS ===== */
+.gherkin-table tr:hover td {
+  background: rgba(100, 108, 255, 0.18);
+  color: #61dafb; /* React zilā */
+}
+
+/* ===== VIRSRKSTS ===== */
+.table-container h2 {
+  color: #646cff;
+  margin: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* ===== GAIŠĀ TĒMA ===== */
+@media (prefers-color-scheme: light) {
+  .table-container {
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+  }
+
+  .gherkin-table {
+    color: #1f2937;
+  }
+
+  .gherkin-table th {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+  }
+
+  .gherkin-table td {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .gherkin-table tr:hover td {
+    background: rgba(37, 99, 235, 0.1);
+    color: #1d4ed8;
+  }
+} 
+/* ===== MOBĪLAJĀS IĒRĪCES ===== */
+@media (max-width: 600px) {
+  .gherkin-table th,
+  .gherkin-table td {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
 }
