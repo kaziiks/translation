@@ -11,6 +11,9 @@ export default function FunkcionalaIezime() {
         tehniski realizēta. Funkcionālās iezīmes galvenais mērķis ir skaidra saziņa
         starp visām iesaistītajām pusēm.
       </p>
+      <a href="https://docs.google.com/document/d/1zEtEuuab_N6jCsAlhPlTZDvGkHr_uuTJeEL1EuUqJPU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+        Funkcionālās iezīmes paraugs
+      </a>
     </section>
   );
 }
