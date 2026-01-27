@@ -13,7 +13,7 @@ function App() {
       <Translations />
     </div>
   );
-  
+
    return (
     <main style={{ maxWidth: "800px", margin: "0 auto", fontFamily: "Arial" }}>
       <h1>Funkcionālo iezīmju veidošana</h1>
@@ -24,6 +24,7 @@ function App() {
       <RubikaKubs />
       <HappyPath />
     </main>
+   );
 }
 
 export default App;
